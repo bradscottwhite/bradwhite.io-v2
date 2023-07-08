@@ -7,6 +7,11 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      crenzo: 'Crenzo',
+      baunk: 'Baunk',
+      triakis: 'Triakis'
+    },
     extend: {
       colors: {
         'pri-dark-1': 'rgb(var(--pri-dark-1))',

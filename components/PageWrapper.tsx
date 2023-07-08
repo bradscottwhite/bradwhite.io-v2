@@ -4,7 +4,7 @@ import Footer from './footer/Footer';
 
 const PageWrapper: FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <div className='overflow-hidden' style={{ fontFamily: 'Triakis' }}>
+    <div className='overflow-hidden font-triakis'>
       <Navbar/>
       {children}
       <Footer />
