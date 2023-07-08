@@ -21,7 +21,7 @@ type postsType = {
 }
 
 interface sectionType {
-  El: FC<postsType> | FC;
+  El: FC | FC<postsType>;
   idName: string;
 }
 
