@@ -13,7 +13,7 @@ import matter from 'gray-matter';
 import fs from "fs";
 import path from "path";
 
-type postType = {
+type postsType = {
   posts: [{
     slug: string,
     frontMatter: { [key: string]: string }
@@ -21,7 +21,7 @@ type postType = {
 }
 
 interface sectionType {
-  El: FC<postType> | FC;
+  El: FC<postsType> | FC;
   idName: string;
 }
 
