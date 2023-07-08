@@ -8,7 +8,7 @@ import {
   NodeIcon
 } from '../icons';
 
-interface projectType {
+export interface projectType {
   title: string;
   desc: string;
   img: string;
