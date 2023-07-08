@@ -1,0 +1,24 @@
+/* For Gist code snippets themes: */
+/* https://github.com/lonekorean/gist-syntax-themes */
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/one-dark.css');
+
+.content {
+  @apply px-[20vw] pt-20 pb-24 bg-pri-dark-1 text-sec-light-1;
+}
+
+.content h1 {
+  @apply text-2xl px-4 py-6 text-pri-accent-1;
+  font-family: 'Baunk';
+}
+
+.content h2 {
+  @apply text-3xl px-4 py-6 text-pri-light-1;
+}
+
+.content p {
+  @apply text-lg p-4;
+}
+
+.content img {
+  @apply py-2 px-1 rounded-2xl;
+}

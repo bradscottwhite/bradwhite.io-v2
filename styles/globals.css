@@ -3,25 +3,102 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+  --pri-dark-1: 113, 10, 27;
+  --pri-dark-2: 86, 60, 92;
+  --pri-dark-3: 60, 92, 91;
+  
+  --sec-dark-1: 139, 65, 79;
+  --sec-dark-2: 100, 83, 148;
+  --sec-dark-3: 59, 104, 83;
+
+  
+  --pri-light-1: 240, 230, 232;
+  --pri-light-2: 236, 230, 240;
+  --pri-light-3: 230, 240, 238;
+
+  --sec-light-1: 196, 157, 164;
+  --sec-light-2: 181, 157, 196;
+  --sec-light-3: 157, 196, 188;
+
+
+  --pri-accent-1: 207, 119, 131;
+  --pri-accent-2: 160, 132, 235;
+  --pri-accent-3: 83, 148, 141;
+
+  --sec-accent-1: 196, 88, 103;
+  --sec-accent-2: 150, 96, 230;
+  --sec-accent-3: 48, 136, 111;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/*.text-light-1\/75 {
+  color: rgba(var(--light-1), 0.75);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.text-light-2\/75 {
+  color: rgba(var(--light-2), 0.75);
+}
+
+.text-light-3\/75 {
+  color: rgba(var(--light-3), 0.75);
+}
+
+.text-accent-1\/75 {
+  color: rgba(var(--accent-1), 0.75);
+}
+
+.hover\:text-light-1\/75:hover {
+  color: rgba(var(--light-1), 0.75);
+}
+
+.hover\:text-light-2\/75:hover {
+  color: rgba(var(--light-2), 0.75);
+}
+
+.hover\:text-light-3\/75:hover {
+  color: rgba(var(--light-3), 0.75);
+}
+
+.hover\:text-accent-1\/75:hover {
+  color: rgba(var(--accent-1), 0.75);
+}*/
+
+@font-face {
+  font-family: 'Crenzo';
+  src: url('../public/fonts/crenzo.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Triakis';
+  src: url('../public/fonts/TriakisReg.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Baunk';
+  src: url('../public/fonts/Baunk.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+.icon-hover {
+  filter: none;
+}
+
+.zoom {
+  @apply relative flex items-center justify-center overflow-hidden shadow-xl;
+}
+.zoom-img {
+  @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover;
+}
+.zoom-hover:hover .zoom-img {
+  @apply scale-110;
+}
+
+.project:hover .project-img {
+  @apply brightness-50;
 }
