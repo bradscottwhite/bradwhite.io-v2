@@ -37,8 +37,8 @@ const Project: FC<{ projectData: projectType }> = ({
         </div>
       </div>
 
-      <h1 className='text-light-3 text-2xl pt-6 pb-2' style={{ fontFamily: 'Baunk' }}>{title}</h1>
-      <p className='text-light-2 text-md pb-4' style={{ fontFamily: 'Triakis' }}>{desc}</p>
+      <h1 className='text-light-3 text-2xl pt-6 pb-2 font-baunk'>{title}</h1>
+      <p className='text-light-2 text-md pb-4'>{desc}</p>
 
       <div className='w-full flex px-8 py-2 justify-center'>
         {tech.map(Icon => <span className='px-4'>

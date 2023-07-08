@@ -17,7 +17,7 @@ const Post: FC<{
     <Tilt
       glareMaxOpacity={45}
       transitionSpeed={450}
-      className='zoom-hover dark:bg-[rgba(var(--dark-2),0.5)] p-8 my-1 rounded-lg h-[500px] cursor-pointer group'
+      className='zoom-hover bg-[rgba(var(--dark-2),0.5)] p-8 my-1 rounded-lg h-[500px] cursor-pointer group'
     >
       <div className='zoom w-full h-1/2 rounded-lg'>
         <div className='zoom-img rounded-lg group-hover:brightness-50' style={{ background: `url(${thumbnail})`, backgroundSize: 'cover' }}></div>
@@ -43,9 +43,9 @@ const Post: FC<{
         className='cursor-ne-resize'
         target='_blank'
       >
-        <h1 className='text-transparent bg-gradient-to-r from-accent-1 via-accent-2 to-accent-3 bg-clip-text text-xl pt-6 pb-2' style={{ fontFamily: 'Baunk' }}>{title}</h1>
+        <h1 className='text-transparent bg-gradient-to-r from-accent-1 via-accent-2 to-accent-3 bg-clip-text text-xl pt-6 pb-2 font-baunk'>{title}</h1>
       </Link>
-      <h2 className='text-light-2 text-md pb-4' style={{ fontFamily: 'Triakis' }}>{subtitle}</h2>
+      <h2 className='text-light-2 text-md pb-4'>{subtitle}</h2>
     {/*Add date!!!*/}
     </Tilt>
   );

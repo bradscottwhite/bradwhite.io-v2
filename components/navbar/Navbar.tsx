@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className='fixed w-full z-20 top-0 left-0' style={{ backgroundColor: 'rgba(var(--dark-2), 0.5)' }}>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <a href='/' className='flex items-center pt-3 brightness-150 text-light-3/75 hover:text-[rgba(var(--accent-1),0.75)]' style={{ fontFamily: 'Crenzo', filter: 'blur(1px)' }}>
+        <a href='/' className='flex items-center pt-3 brightness-150 text-light-3/75 hover:text-[rgba(var(--accent-1),0.75)] font-crenzo' style={{ filter: 'blur(1px)' }}>
           <span className='self-center text-3xl font-semibold whitespace-nowrap'>BW</span>
         </a>
 

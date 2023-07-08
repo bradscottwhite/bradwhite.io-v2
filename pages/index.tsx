@@ -44,7 +44,6 @@ const Home = (props: {
             <El posts={props.posts}/>
           </SectionWrapper>
         );
-;
       })}
     </PageWrapper>
   );
