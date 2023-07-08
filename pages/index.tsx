@@ -13,8 +13,15 @@ import matter from 'gray-matter';
 import fs from "fs";
 import path from "path";
 
+interface postType {
+  posts: {
+    slug: string,
+    frontMatter: { [key: string]: string }
+  }[]
+}
+
 interface sectionType {
-  El: FC;
+  El: FC | FC<postType>;
   idName: string;
 }
 
@@ -26,12 +33,7 @@ const sections: sectionType[] = [
   /*{ El: Contact, idName: 'contact' }*/
 ];
 
-const Home = (props: {
-  posts: [{
-    slug: string,
-    frontMatter: { [key: string]: string }
-  }]
-}) => {
+const Home = (props: postsType) => {
   return (
     <PageWrapper>
       {sections.map(({ El, idName }, index) => {
