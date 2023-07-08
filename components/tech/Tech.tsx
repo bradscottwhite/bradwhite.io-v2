@@ -12,7 +12,7 @@ const Tech = () => {
         className='bg-[rgba(var(--dark-2),0.5)] rounded-lg flex flex-row flex-wrap justify-center gap-10 px-10 py-6 mx-[10vw]'
       >
         {technologies.map(Icon => (
-          <Icon size='3.5em' />
+          <Icon size={'3.5em'} />
         ))}
       </Tilt>
     </div>

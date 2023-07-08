@@ -42,7 +42,7 @@ const Project: FC<{ projectData: projectType }> = ({
 
       <div className='w-full flex px-8 py-2 justify-center'>
         {tech.map(Icon => <span className='px-4'>
-          <Icon size='2em' />
+          <Icon size={'2em'} />
         </span>)}
       </div>
     </Tilt>
