@@ -14,7 +14,7 @@ export interface projectType {
   img: string;
   url: string;
   github: string;
-  tech: FC[]
+  tech: FC<{ size: string }>[];
 }
 
 export const projects: projectType[] = [
