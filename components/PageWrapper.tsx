@@ -1,8 +1,8 @@
-import { FC } from 'react';
+import { ReactNode } from 'react';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 
-const PageWrapper: FC<{ children: FC | FC[] }> = ({ children }) => {
+const PageWrapper: FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <div className='overflow-hidden' style={{ fontFamily: 'Triakis' }}>
       <Navbar/>
