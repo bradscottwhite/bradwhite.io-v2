@@ -15,7 +15,7 @@ import {
   MSSQLIcon
 } from '../icons';
 
-const technologies: FC[] = [
+const technologies: FC<{ size: string }>[] = [
   TSIcon,
   ReactIcon,
   AWSIcon,
