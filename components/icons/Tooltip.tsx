@@ -1,6 +1,6 @@
-import { FC } from 'react';
+import { FC, ReactNode } from 'react';
 
-const Tooltip: FC<{ children: FC, text: string }> = ({ children, text }) => {
+const Tooltip: FC<{ children: ReactNode, text: string }> = ({ children, text }) => {
   return (
     <div className='relative flex flex-col items-center group'>
       {children}
