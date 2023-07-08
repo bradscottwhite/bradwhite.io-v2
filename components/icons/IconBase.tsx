@@ -1,6 +1,7 @@
+import { FC, ReactNode } from 'react';
 import Tooltip from './Tooltip';
 
-const IconBase: FC<{ children: FC, color: string, text: string }> = ({ children, color, text }) => {
+const IconBase: FC<{ children: ReactNode, color: string, text: string }> = ({ children, color, text }) => {
   return (
     <Tooltip text={text}>
       <div className='hover:cursor-pointer hover:scale-125 relative group'>
