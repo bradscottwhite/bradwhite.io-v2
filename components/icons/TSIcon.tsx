@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const TSIcon = ({ size }: { size: number }) => (
+const TSIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#007acc]' text='TypeScript'>
     <svg
       width={size} height={size}

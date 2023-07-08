@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const MSSQLIcon = ({ size }: { size: number }) => (
+const MSSQLIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#a91d22]' text='Microsoft SQL Server'>
     <svg
       width={size} height={size}

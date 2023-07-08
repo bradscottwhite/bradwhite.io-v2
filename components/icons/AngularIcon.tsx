@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const AngularIcon = ({ size }: { size: number }) => (
+const AngularIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#C4473A]' text='Angular'>
     <svg
       width={size} height={size}

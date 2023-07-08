@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const HTMLIcon = ({ size }: { size: number }) => (
+const HTMLIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#E44D26]' text='HTML5'>
     <svg
       width={size} height={size}

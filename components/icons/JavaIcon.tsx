@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const JavaIcon = ({ size }: { size: number }) => (
+const JavaIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#EA2D2E]' text='Java'>
     <svg
       width={size} height={size}

@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const CSSIcon = ({ size }: { size: number }) => (
+const CSSIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#1572B6]' text='CSS3'>
     <svg
       width={size} height={size}

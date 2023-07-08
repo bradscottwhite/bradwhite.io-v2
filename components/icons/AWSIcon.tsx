@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const AWSIcon = ({ size }: { size: number }) => {
+const AWSIcon = ({ size }: { size: string }) => {
   return (
     <IconBase text='Amazon Web Services' color='bg-[#F7A80D]'>
       <svg

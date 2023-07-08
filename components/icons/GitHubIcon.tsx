@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const GitHubIcon = ({ size }: { size: number }) => (
+const GitHubIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#3298da]' text='GitHub'>
     <svg
       width={size} height={size}

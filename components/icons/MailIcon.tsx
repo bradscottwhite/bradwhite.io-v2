@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const MailIcon = ({ size }: { size: number }) => (
+const MailIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#3B82F6]' text='Contact'>
     <svg
       width={size} height={size}

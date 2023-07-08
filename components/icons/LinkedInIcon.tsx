@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const LinkedInIcon = ({ size }: { size: number }) => (
+const LinkedInIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#0076b2]' text='LinkedIn'>
     <svg
       width={size} height={size}

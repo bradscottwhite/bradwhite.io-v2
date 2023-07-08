@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const TWIcon = ({ size }: { size: number }) => (
+const TWIcon = ({ size }: { size: string }) => (
   <IconBase text='Tailwind CSS' color='bg-[#38b2ac]'>
     <svg
       width={size} height={size}

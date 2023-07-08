@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const GraphQLIcon = ({ size }: { size: number }) => (
+const GraphQLIcon = ({ size }: { size: string }) => (
   <IconBase text='GraphQL' color='bg-[#E434AA]'>
     <svg
       width={size}

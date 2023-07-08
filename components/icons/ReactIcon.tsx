@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const ReactIcon = ({ size }: { size: number }) => (
+const ReactIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#61DAFB]' text='React.js'>
     <svg
       width={size} height={size}

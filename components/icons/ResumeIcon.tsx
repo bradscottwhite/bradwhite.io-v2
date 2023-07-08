@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const ResumeIcon = ({ size }: { size: number }) => (
+const ResumeIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#3B82F6]' text='Resume'>
     <svg
       width={size} height={size}

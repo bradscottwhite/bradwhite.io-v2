@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const NodeIcon = ({ size }: { size: number }) => (
+const NodeIcon = ({ size }: { size: string }) => (
   <IconBase text='Node.js' color='bg-[#83CD29]'>
     <svg
       width={size} height={size}

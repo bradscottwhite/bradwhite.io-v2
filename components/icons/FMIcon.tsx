@@ -1,6 +1,6 @@
 import IconBase from './IconBase';
 
-const TSIcon = ({ size }: { size: number }) => (
+const TSIcon = ({ size }: { size: string }) => (
   <IconBase color='bg-[#bb4b96]' text='Framer Motion'>
     <svg
       width={size} height={size}
