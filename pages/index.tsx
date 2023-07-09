@@ -13,14 +13,14 @@ import matter from 'gray-matter';
 import fs from "fs";
 import path from "path";
 
-interface postsType {
+type postsType = {
   posts: {
     slug: string,
     frontMatter: { [key: string]: string }
   }[];
 }
 
-interface sectionType {
+type sectionType = {
   El: FC | FC<postsType>;
   idName: string;
 }
@@ -41,7 +41,7 @@ const Home = (props: {} | postsType) => {
           {idName !== 'blog' ? (
             <El />
           ) : (
-            <El posts={props.posts}/>
+            <El posts={props.posts} />
           )}
         </SectionWrapper>
       ))}
