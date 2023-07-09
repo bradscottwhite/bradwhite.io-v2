@@ -13,15 +13,8 @@ import matter from 'gray-matter';
 import fs from "fs";
 import path from "path";
 
-type postsType = {
-  posts: {
-    slug: string,
-    frontMatter: { [key: string]: string }
-  }[];
-}
-
-type sectionType = {
-  El: FC | FC<postsType>;
+interface sectionType {
+  El: FC;
   idName: string;
 }
 
@@ -29,22 +22,29 @@ const sections: sectionType[] = [
   { El: Front, idName: 'home' },
   { El: Tech, idName: 'tech' },
   { El: Projects, idName: 'projects' },
-  { El: Blog, idName: 'blog' },
-  /*{ El: Contact, idName: 'contact' }*/
 ];
 
-const Home = (props: {} | postsType) => {
+const Home = (props: {
+  posts: [ {
+    frontMatter: { [key: string]: string },
+    slug: string
+  } ]
+}) => {
   return (
     <PageWrapper>
       {sections.map(({ El, idName }, index) => (
         <SectionWrapper idName={idName} index={index}>
-          {idName !== 'blog' ? (
-            <El />
-          ) : (
-            <El posts={props.posts} />
-          )}
+          <El />
         </SectionWrapper>
       ))}
+
+      <SectionWrapper idName='blog' index={sections.length + 1}>
+        <Blog posts={props.posts} />
+      </SectionWrapper>
+
+    {/*<SectionWrapper idName='contact' index={sections.length + 2}>
+        <Blog />
+      </SectionWrapper>*/}
     </PageWrapper>
   );
 };
