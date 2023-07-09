@@ -19,8 +19,8 @@ const BlogPost: FC<{
     <div>
       <div className='relative w-screen py-[28vh] px-[15vh] text-center'>
         <img className='z-[-1] brightness-35 w-screen h-full bg-cover absolute top-0 left-0' src={frontMatter.thumbnail} alt={frontMatter.title} />
-        <h1 className='text-light-3 text-2xl' style={{ fontFamily: 'Crenzo' }}>{frontMatter.title}</h1>
-        <h2 className='text-light-2 text-xl pt-2' style={{ fontFamily: 'Baunk' }}>{frontMatter.subtitle}</h2>
+        <h1 className='text-pri-light-2 text-2xl font-crenzo'>{frontMatter.title}</h1>
+        <h2 className='text-sec-light-2 text-xl pt-2 font-baunk'>{frontMatter.subtitle}</h2>
         {/*date*/}
       </div>
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: marked(content) }} />
