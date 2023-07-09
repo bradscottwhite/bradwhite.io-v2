@@ -33,7 +33,7 @@ const sections: sectionType[] = [
   /*{ El: Contact, idName: 'contact' }*/
 ];
 
-const Home = (props: postsType) => {
+const Home = (props: {} | postsType) => {
   return (
     <PageWrapper>
       {sections.map(({ El, idName }, index) => (
