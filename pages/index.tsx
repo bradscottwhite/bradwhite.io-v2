@@ -13,11 +13,11 @@ import matter from 'gray-matter';
 import fs from "fs";
 import path from "path";
 
-type postsType = {
-  posts: [{
+interface postsType {
+  posts: {
     slug: string,
     frontMatter: { [key: string]: string }
-  }]
+  }[];
 }
 
 interface sectionType {
@@ -36,17 +36,15 @@ const sections: sectionType[] = [
 const Home = (props: postsType) => {
   return (
     <PageWrapper>
-      {sections.map(({ El, idName }, index) => {
-        return idName !== 'blog' ? (
-          <SectionWrapper idName={idName} index={index}>
+      {sections.map(({ El, idName }, index) => (
+        <SectionWrapper idName={idName} index={index}>
+          {idName !== 'blog' ? (
             <El />
-          </SectionWrapper>
-        ) : (
-          <SectionWrapper idName={idName} index={index}>
+          ) : (
             <El posts={props.posts}/>
-          </SectionWrapper>
-        );
-      })}
+          )}
+        </SectionWrapper>
+      ))}
     </PageWrapper>
   );
 };
