@@ -7,7 +7,7 @@ const Blog: FC<{ posts: [{
 }] }> = ({ posts }) => {
   return (
     <div>
-      <h1 className='px-28 pt-20 pb-10 text-2xl text-light-3 font-baunk'>Blog</h1>
+      <h1 className='px-28 pt-20 pb-10 text-2xl text-pri-light-1 font-baunk'>Blog</h1>
 
       <div className='w-screen flex grid grid-cols-3 gap-10 px-24 pt-4 pb-24'>
         {posts.map(({ slug, frontMatter }) => <Post slug={slug} frontMatter={frontMatter} key={slug} />)}

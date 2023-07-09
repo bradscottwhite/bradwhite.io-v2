@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className='mx-auto bg-dark-2 w-full'>
+    <footer className='mx-auto bg-sec-dark-2 w-full'>
       <div className='p-4 md:py-8 px-16'>
         <div className='sm:flex sm:items-center sm:justify-between'>
-          <Link href='/' className='flex items-center pt-3 brightness-150 text-light-3/75 font-crenzo' style={{ filter: 'blur(1px)' }}>
+          <Link href='/' className='flex items-center pt-3 brightness-150 text-pri-light-1 hover:text-pri-accent-1 font-crenzo' style={{ filter: 'blur(1px)' }}>
             <span className='self-center text-3xl font-semibold whitespace-nowrap'>BW</span>
           </Link>
 
@@ -31,7 +31,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <span className='block text-sm sm:text-center text-light-1 pt-6 pb-2'>
+        <span className='block text-sm sm:text-center text-sec-light-1 pt-6 pb-2'>
           <Link href='/' className='hover:underline'>Brad White</Link> {new Date().getFullYear()}
         </span>
       </div>

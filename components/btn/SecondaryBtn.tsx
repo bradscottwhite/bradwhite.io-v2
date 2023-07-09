@@ -11,7 +11,7 @@ const SecondaryBtn: FC<btnType> = ({ text, url }) => {
 
   return (
     <Link
-      className='group [transform:translateZ(0)] px-6 py-2 rounded-xl overflow-hidden border-2 border-dark-3 relative before:absolute before:bg-gradient-to-r before:from-[rgba(var(--accent-1),0.75)] before:to-[rgba(var(--accent-2),0.75)] before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500 px-4 py-2 text-center mr-3 md:mr-0 text-dark-3 text-xl'
+      className='group [transform:translateZ(0)] px-6 py-2 rounded-xl overflow-hidden border-2 border-sec-dark-3 relative before:absolute before:bg-gradient-to-r before:from-[rgba(var(--sec-accent-1),0.75)] before:to-[rgba(var(--sec-accent-2),0.75)] before:top-1/2 before:left-1/2 before:h-8 before:w-8 before:-translate-y-1/2 before:-translate-x-1/2 before:rounded-full before:scale-[0] before:opacity-0 hover:before:scale-[6] hover:before:opacity-100 before:transition before:ease-in-out before:duration-500 px-4 py-2 text-center mr-3 md:mr-0 text-sec-dark-3 text-xl'
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       href={url}

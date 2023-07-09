@@ -29,7 +29,7 @@ const SectionWrapper: FC<wrapperType> = ({
             radial-gradient(at 59% 14%, rgb(var(--sec-light-1)) 0px, transparent 50%)
           `
         } : {
-          backgroundColor: 'rgb(var(--dark-1))'
+          backgroundColor: 'rgb(var(--pri-dark-1))'
         }
       }
     >
