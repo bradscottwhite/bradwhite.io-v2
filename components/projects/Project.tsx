@@ -41,7 +41,7 @@ const Project: FC<{ projectData: projectType }> = ({
       <p className='text-light-2 text-md pb-4'>{desc}</p>
 
       <div className='w-full flex px-8 py-2 justify-center'>
-        {tech.map(Icon => <span className='px-4'>
+        {tech.map(Icon => <span className='px-4' key={Math.random()}>
           <Icon size={'2em'} />
         </span>)}
       </div>

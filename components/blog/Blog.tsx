@@ -10,7 +10,7 @@ const Blog: FC<{ posts: [{
       <h1 className='px-28 pt-20 pb-10 text-2xl text-light-3 font-baunk'>Blog</h1>
 
       <div className='w-screen flex grid grid-cols-3 gap-10 px-24 pt-4 pb-24'>
-        {posts.map(({ slug, frontMatter }) => <Post slug={slug} frontMatter={frontMatter} />)}
+        {posts.map(({ slug, frontMatter }) => <Post slug={slug} frontMatter={frontMatter} key={slug} />)}
       </div>
     {/*!!! ADD 'see more' limiting feature!!!*/}
     </div>

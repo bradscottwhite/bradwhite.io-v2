@@ -33,7 +33,7 @@ const Home = (props: {
   return (
     <PageWrapper>
       {sections.map(({ El, idName }, index) => (
-        <SectionWrapper idName={idName} index={index}>
+        <SectionWrapper idName={idName} index={index} key={idName}>
           <El />
         </SectionWrapper>
       ))}
