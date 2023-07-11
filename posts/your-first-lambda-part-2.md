@@ -63,12 +63,14 @@ Finally, it will open the stage editor page. Locate and copy the address of the 
 ![Lambda setup pic 2.12](/blog-imgs/lambda-2.12.png)
 
 Paste the URL into a variable in the terminal:
-<script src="https://gist.github.com/bradscottwhite/6f0bd105d91150a5c4bccc77ee1b83bc.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>API_URL=***YOUR_API_URL_HERE***</code></pre>
 
 To test our API we will use the following terminal command:
-<script src="https://gist.github.com/bradscottwhite/cc9fe1d1d0351ec0179546460bef300c.js"></script>
+<pre class='command-line' data-continuation-str='\'><code class='language-bash' data-prismjs-copy='Copy'>curl -d '{ "name": "Lambda" }' \
+    -H 'Content-Type: application/json' \
+    "${API_URL}/hello"</code></pre>
 
 The terminal should display the following result:
-<script src="https://gist.github.com/bradscottwhite/dd2327daa7633c322bdaac1080fe7cc0.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>{ "msg": "Hello Lambda" }</code></pre>
 
 There we have it. We've build a functioning Lambda Rest API. Now, all we have to do is interact with this API in the front end.

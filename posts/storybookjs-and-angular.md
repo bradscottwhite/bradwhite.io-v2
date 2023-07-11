@@ -12,36 +12,58 @@ Also here is the link to the [GitHub repo](https://github.com/bradscottwhite/sb-
 
 # Setting Up an Angular App w/ Tailwind
 First, let's create our Angular app and move into it's root directory:
-<script src="https://gist.github.com/bradscottwhite/f1e9d5978ed69b3ffa80fa6afbdf6c42.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>ng n sb-ng-demo && cd sb-ng-demo</code></pre>
 
 ## Integrate Tailwind Into Our App
 Second, let's install and initialize Tailwind:
-<script src="https://gist.github.com/bradscottwhite/7236e308ca7056f4b70a195e6ce7bec8.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init</code></pre>
 
 ## Configure Tailwind In Our App
 Finally, let's configure the content of the template paths in the tailwind.config.js file:
-<script src="https://gist.github.com/bradscottwhite/18545b2d18980e156c7cd7883a0e79bc.js"></script>
+<pre><code class='language-css' data-prismjs-copy='Copy'>@tailwind base;
+@tailwind components;
+@tailwind utilities;</code></pre>
 
 Create a Simple Button Component
 Before we worry about Storybook let's first generate a simple button component that we can later use to test:
-<script src="https://gist.github.com/bradscottwhite/a383421abce1f2a4f079e2c56d659f23.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>ng g c btn</code></pre>
 
 ## Adding Parameters to The Component
 Now let's add a color parameter to the button in its component.ts file:
-<script src="https://gist.github.com/bradscottwhite/dd95e4b2b76f535f7ae40fc47cfda6e6.js"></script>
+<pre><code class='language-ts' data-prismjs-copy='Copy'>import { Component, Input } from '@angular/core'; // Import input decorator
+
+@Component({
+  selector: 'app-btn',
+  templateUrl: './btn.component.html',
+  styleUrls: ['./btn.component.css']
+})
+export class BtnComponent {
+
+  // Add input decorator
+  @Input()
+  color?: string; // Add color param
+
+}</code></pre>
 
 ## Adding a Template to The Component
 Finally, let's add the template markdown to our button:
-<script src="https://gist.github.com/bradscottwhite/5a272257c7a4eccafc0ad68526292a08.js"></script>
+<pre><code class='language-html' data-prismjs-copy='Copy'>&lt;button
+    class='text-lg rounded-xl px-4 py-2 mx-6 my-4 text-white shadow-xl border-slate-400/50 border-2'
+    [ngClass]="color === 'primary' ? 'bg-blue-700 hover:bg-blue-800' : 'bg-slate-500 hover:bg-slate-600'"
+&gt;
+  &lt;ng-content&gt;&lt;/ng-content&gt;
+&lt;/button&gt;</code></pre>
 
 <b>NOTE: the 'ng-content' tag is for the button's inner text.</b>
 
 ## Adding The Component Within Our App
 Now let's add our button component to our app in the app.component.html file:
-<script src="https://gist.github.com/bradscottwhite/cb7076f4fb6a0b502436255da816692b.js"></script>
+<pre><code class='language-html' data-prismjs-copy='Copy'>&lt;app-btn color='primary'&gt;Button&lt;/app-btn&gt;
+&lt;app-btn&gt;Button&lt;/app-btn&gt;</code></pre>
 
 Let's also run our app to make sure things are running smoothly:
-<script src="https://gist.github.com/bradscottwhite/f51330c78371cf24536b59feb5faebab.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>ng serve --open</code></pre>
 
 It should look like this:
 ![storybook ng pic 1.1](/blog-imgs/storybook-ng-1.1.png)
@@ -51,11 +73,38 @@ Now that we have our component to test, let's shift to working with Storybook.
 
 ## Setting up Storybook.js
 First, let's install Storybook.js into our Angular app as well as start it up:
-<script src="https://gist.github.com/bradscottwhite/10f07089295a3fa798c04b9e37e6fdc0.js"></script>
+<pre class='command-line'><code class='language-bash' data-prismjs-copy='Copy'>npx sb init
+
+npm run storybook</code></pre>
 
 ## Create Story for Component
 Next, let's integrate our button component into Storybook by creating a file called 'stories/Btn.stories.ts':
-<script src="https://gist.github.com/bradscottwhite/c3c5953dbdc1c1db584108da877b1ee7.js"></script>
+<pre><code class='language-ts' data-prismjs-copy='Copy'>import { Story, Meta } from '@storybook/angular/types-6-0';
+import { BtnComponent as Btn } from '../app/btn/btn.component'; // Import btn component
+
+export default {
+  title: 'Component/Button', // Name the story
+  component: Btn,
+  argTypes: {}
+} as Meta;
+
+const Template: Story<Btn> = (args: Btn) => ({
+  props: args,
+  // This is our template for our btn:
+  template: `
+    &lt;app-btn [color]="color"&gt;
+      This is a template test.
+    &lt;/app-btn&gt;`,
+});
+
+// This displays a simple example of the component
+export const SimpleExample = Template.bind({});
+
+// This displays the component with the color as primary
+export const Primary = Template.bind({});
+Primary.args = {
+  color: 'primary'
+} as Partial<Btn>;</code></pre>
 
 # Using Storybook.js
 Finally, visit page localhost:6006 and navigate to Component/Button in the sidebar to view our component.

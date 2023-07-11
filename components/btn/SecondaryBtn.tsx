@@ -16,7 +16,7 @@ const SecondaryBtn: FC<btnType> = ({ text, url }) => {
       onMouseLeave={() => setHover(false)}
       href={url}
     >
-      <span className='relative z-0 group-hover:text-light-3 transition ease-in-out duration-500 flex items-center justify-center'>
+      <span className='relative z-0 group-hover:text-sec-light-3 transition ease-in-out duration-500 flex items-center justify-center'>
         <span className='pt-1'>{text}</span>
         <span className='inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200'>
           <svg className='ml-2' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'>
